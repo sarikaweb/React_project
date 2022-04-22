@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import Todo from './todo';
+import Todo from './Todo';
 import TodoForm from './todoForm';
-import Todo from './todo';
 
-function Todolist(props) {
+
+function Todoist() {
 
    const [todos, setTodos] = useState([]);
 
@@ -16,14 +16,35 @@ function Todolist(props) {
 
    }
 
+
+const removeTodo = id => {
+  const removeArr = [...todos].filter(todo => todo.id !== id)
+
+  setTodos(removeArr)
+}
+
+const updateTodo = (todoId, newValue) =>  {
+setTodos(prev => prev.map(item => item.id === todoId ? newValue : item))
+}
+
+const completeTodo = id => {
+  let UpdatedTodos = todos.map(todo => {
+    if(todo.id === id) {
+      todo.isComplete = !todo.isComplete;
+    }
+
+    return todo;
+  });
+setTodos(UpdatedTodos);
+};
     
   return (
       <>
-    <div>todolist</div>
-   <TodoForm onSubmit={addToDo}/>
-   <Todo />
+      <div>todolist</div>
+      <TodoForm onSubmit={addToDo}/>
+      <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo} />
       </>
   )
 }
 
-export default Todolist
+export default Todoist
