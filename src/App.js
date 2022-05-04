@@ -1,34 +1,29 @@
+import React from 'react';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import "./css/style.css";
 import './App.css';
-//import Todolist, {useState} from './todolist';
 import Header from './common/Header';
-import Footer from './common/Footer';
 import Home from './Home';
+import Todolist, {useState} from './todolist';
+
+import Footer from './common/Footer';
+
 import { Row } from 'react-bootstrap';
 import Sidebar from './common/sidebar';
+import DigiTime from './Digitime';
 
 
 function App() {
   return (
-    // <div className="todo-app">
-    //   <div className="todolist">
-    //   <Todolist />
-    //   </div>
-    // </div>
-    <>
-
-     <Header/>
-     <Row>
-       <div className='col-md-4'>
-         <Sidebar />
-       </div>
-       
-       <div className='col-md-8'>
-         <Home />
-     </div>
-     </Row>
-     <Footer />
-
-    </>
+    <BrowserRouter>
+ <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/todolist" element={<Todolist />} />
+      <Route path="/Digitime" element={<DigiTime />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
