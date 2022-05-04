@@ -3,27 +3,40 @@ import React, { Component, useState } from 'react';
 
 
 
-const DigiClock = () =>  {
- 
-    let time = new Date().toLocaleString();
-    const [currentTime, setCurrentTime] = useState(time);
-
-    const updateDateTime = () =>{
-        time = new Date().toLocaleString();
-        setCurrentTime(time);
+class DigiClock extends React.Component {
+    constructor(props) {
+        super(props);
+  
+    console.log('state here...');
+    this.state = {
+        time: new Date().toLocaleString()
     };
-    setInterval(updateDateTime, 1000);
+}
+static getDerivedStateFromProps(props, state) {
+    console.log('getDerivedStateFromProps here...');
+    return null;
+}
+componentDidMount() {
+    setInterval(() => {
+          this.setState({
+              time: new Date().toLocaleString(),
+          });
+      }, 1000);
+  }
+componentWillUnmount(){
+    
+}
+render() {
     return (
         <>
          <div className='date-time'>
-             <h1>Clock Here</h1>
+             <h1>Digital Clock</h1>
 
-             <h6>{currentTime}</h6>
-             <button onClick={updateDateTime}>Update Time</button>
+             <h6>Date & Time : {this.state.time}</h6>
          </div>
       </>
     )
-
+    }
 }
 
 export default DigiClock;
