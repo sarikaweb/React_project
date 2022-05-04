@@ -11,6 +11,7 @@ import Footer from './common/Footer';
 import { Row } from 'react-bootstrap';
 import Sidebar from './common/sidebar';
 import DigiTime from './Digitime';
+import ModalComponent from './ModalComponent';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
       <Route path="/Home" element={<Home />} />
       <Route path="/todolist" element={<Todolist />} />
       <Route path="/Digitime" element={<DigiTime />} />
+      
+      <Route path="/ModalComponent" element={<ModalComponent />} />
     </Routes>
     </BrowserRouter>
   );
