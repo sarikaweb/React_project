@@ -3,12 +3,7 @@ import Modal from "./Modal";
 
 const ModalComponent = () => {
     const [ModalOpen, setModalOpen] = useState(false);
-    // const showModal = () => {
-    //     setStatus(ModalOpen => true);
-    // }
-    // const closeModal = () => {
-    //     setStatus(ModalOpen => false);
-    // }
+  
     return (
         <>
             <div>

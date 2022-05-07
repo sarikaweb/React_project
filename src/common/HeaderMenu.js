@@ -1,6 +1,7 @@
 import React  from 'react';
 import {Link} from 'react-router-dom';
-
+import {Container} from 'react-bootstrap';
+import {Navbar, Nav } from 'react-bootstrap';
 
 class HeaderMenu extends React.Component {
 
@@ -9,14 +10,21 @@ class HeaderMenu extends React.Component {
   render() {
     return (
         <>
-           <div className='main-navigation'>
-             
-               <Link to="/Home" className='btn btn-primary'>Home</Link>
-               <Link to="/todolist"  className='btn btn-primary'>Todo List</Link>
-               <Link to="/Digitime"  className='btn btn-primary'>Digital Clock & Date</Link>
-               <Link to="/ModalComponent"  className='btn btn-primary'>Modal Component</Link>
-               
-           </div>
+
+    <Navbar bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand ><Link to="/"><img src={require('../images/logo.png')} alt='' title='' /></Link></Navbar.Brand>
+    <Nav><Link to="/Home">Home</Link></Nav>
+      <Nav><Link to="/todolist">Todo List</Link></Nav>
+      <Nav><Link to="/Digitime">Digital Clock & Date</Link></Nav>
+      <Nav><Link to="/ModalComponent">Modal Component</Link></Nav>
+      <Nav> <Link to="/CurrencyConverter">Currency Converter</Link></Nav>
+      
+    
+    </Container>
+  </Navbar>
+
+
       </>
     )
   }
