@@ -23,7 +23,7 @@ function App() {
       <Col className='col-md-3 bg-gray'>
       <Sidebar/>
       </Col>
-      <Col className='col-md-9  padding-all'>
+      <Col className='col-md-9npm   padding-all'>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Home" element={<Home />} />
