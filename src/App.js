@@ -13,10 +13,12 @@ import Sidebar from './common/sidebar';
 import DigiTime from './Digitime';
 import ModalComponent from './ModalComponent';
 import CurrencyConverter from './CurrencyConverter';
+import ThemeSwitcher from './ThemeSwitcher';
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
  <Header />
    <Container>
     <Row>
@@ -32,6 +34,7 @@ function App() {
       
       <Route path="/ModalComponent" element={<ModalComponent />} />
       <Route path="/CurrencyConverter" element={<CurrencyConverter />} />
+      <Route path="/ThemeSwitcher" element={<ThemeSwitcher />} />
     </Routes>
       </Col>
     </Row>
