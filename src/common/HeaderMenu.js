@@ -19,6 +19,7 @@ class HeaderMenu extends React.Component {
       <Nav><Link to="/Digitime">Digital Clock & Date</Link></Nav>
       <Nav><Link to="/ModalComponent">Modal Component</Link></Nav>
       <Nav> <Link to="/CurrencyConverter">Currency Converter</Link></Nav>
+      <Nav> <Link to="/WeatherApp">Weather App</Link></Nav>
       
     
     </Container>

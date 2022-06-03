@@ -14,6 +14,7 @@ import DigiTime from './Digitime';
 import ModalComponent from './ModalComponent';
 import CurrencyConverter from './CurrencyConverter';
 import ThemeSwitcher from './ThemeSwitcher';
+import WeatherApp from './WeatherApp';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Route path="/ModalComponent" element={<ModalComponent />} />
       <Route path="/CurrencyConverter" element={<CurrencyConverter />} />
       <Route path="/ThemeSwitcher" element={<ThemeSwitcher />} />
+      <Route path="/WeatherApp" element={<WeatherApp />} />
     </Routes>
       </Col>
     </Row>
