@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import "./css/style.css"
 
 const api={
     key:"e356fa72d1eddafd60fab8f755efc020",

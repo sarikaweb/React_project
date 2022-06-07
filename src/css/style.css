@@ -28,3 +28,8 @@ padding:15px
     background-color: yellow;
     cursor: pointer;
 }
+
+body{
+    background: red;
+}
+label {min-width: 100px;margin-bottom: 20px;}

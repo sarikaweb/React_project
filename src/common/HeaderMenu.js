@@ -20,7 +20,7 @@ class HeaderMenu extends React.Component {
       <Nav><Link to="/ModalComponent">Modal Component</Link></Nav>
       <Nav> <Link to="/CurrencyConverter">Currency Converter</Link></Nav>
       <Nav> <Link to="/WeatherApp">Weather App</Link></Nav>
-      
+      <Nav> <Link to="/EmiCalculator">EMI</Link></Nav>
     
     </Container>
   </Navbar>
