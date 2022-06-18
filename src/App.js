@@ -15,6 +15,7 @@ import ModalComponent from './ModalComponent';
 import CurrencyConverter from './CurrencyConverter';
 import ThemeSwitcher from './ThemeSwitcher';
 import WeatherApp from './WeatherApp';
+import ExpenseTracker from './ExpenseTracker';
 import EmiCalculator from './EmiCalculator';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Route path="/CurrencyConverter" element={<CurrencyConverter />} />
       <Route path="/ThemeSwitcher" element={<ThemeSwitcher />} />
       <Route path="/WeatherApp" element={<WeatherApp />} />
+      <Route path="/ExpenseTracker" element={<ExpenseTracker />} />
       <Route path="/EmiCalculator" element={<EmiCalculator />} />
     </Routes>
       </Col>
