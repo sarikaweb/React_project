@@ -6,7 +6,7 @@ const api={
     key:"e356fa72d1eddafd60fab8f755efc020",
     url:"https://api.openweathermap.org/data/2.5/"
   }
-  
+
   function WeatherApp() {
   
     const [query,setQuery] = React.useState('');

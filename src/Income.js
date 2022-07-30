@@ -1,10 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {Row, Col} from 'react-bootstrap';
+import React, {useState, useEffect, useContext} from 'react';
 import { DataAppContext } from './DataApp';
 
 const Income = () => {
     const localAppData = useContext(DataAppContext);
-    // const tempObj = {id: '', name: '', amount: ''}
     const [incomeList, setIncomeList] = useState([]);
     const [nameincome, setNameincome] = useState('');
     const [amountincome, setAmountincome] = useState(0);
@@ -13,6 +11,7 @@ const Income = () => {
     }
     const updateAmount = (e) => {
         setAmountincome(e.target.value)
+
     }
     const addIncome = () => {
         setIncomeList([...incomeList, {id: 'income', name: nameincome, amount: amountincome}]);
@@ -25,26 +24,26 @@ const Income = () => {
     })
     return(
         <>
-        <Row>
-            <Col sm={12} className="bg-warning">
+        <div>
+            <div>
                 <h4>Add Income</h4>
-            </Col>
-        </Row>
-        <Row>
-            <Col sm={12} className="bg-warning">
+            </div>
+        </div>
+        <div>
+            <div>
                 <input type="text" value={nameincome} onChange={updateName}/>
                 <input type="number" value={amountincome} onChange={updateAmount}/>
                 <button onClick={addIncome}>Add Income</button>
-            </Col>
-        </Row>
-        <Row>
-            <Col sm={12} className="bg-secondary bg-opacity-25">
+            </div>
+        </div>
+        <div>
+            <div>
                 <h4>List of income</h4>
                 {incomeList && incomeList.map((item) => (
                     <div>{item.name } - {item.amount}</div>
                 ))}
-            </Col>
-        </Row>
+            </div>
+        </div>
         </>
     )
 }

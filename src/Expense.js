@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect} from 'react';
-import {Row, Col} from 'react-bootstrap';
+
 import { DataAppContext } from './DataApp';
+
 
 const Expense = () => {
     const localAppData = useContext(DataAppContext);
@@ -24,29 +25,29 @@ const Expense = () => {
     })
     return(
         <>
-        <Row>
-            <Col sm={12}  className="bg-warning">
+        <div>
+            <div>
                 <h4>Add Expense</h4>
-            </Col>
-        </Row>
-        <Row>
-            <Col sm={12}  className="bg-warning">
-                {/* <input type="number" onChange={localAppData.subBalance}/> */}
+            </div>
+        </div>
+        <div>
+            <div>
                 <input type="text" value={nameexpense} onChange={updateName}/>
                 <input type="number" value={amountexpense} onChange={updateAmount}/>
                 <button onClick={subIncome}>Add Expense</button>
-            </Col>
-        </Row>
-        <Row>
-            <Col sm={12} className="bg-secondary bg-opacity-25">
+            </div>
+        </div>
+        <div>
+            <div>
                 <h4>List of expense</h4>
-                {expenseList && expenseList.map((item) => (
+                     {expenseList && expenseList.map((item) => (
                     <div>{item.name } - {item.amount}</div>
                 ))}
-            </Col>
-        </Row>
+            </div>
+        </div>
         </>
     )
 }
 
 export default Expense;
+

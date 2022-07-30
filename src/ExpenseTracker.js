@@ -1,30 +1,30 @@
-import React, { useContext } from 'react';
-import {Row, Col} from 'react-bootstrap';
+import React, { Component, useState, useContext} from "react";
 import Income from './Income';
 import Expense from './Expense';
 
-import { DataAppContext } from './DataApp';
+import {DataAppContext} from './DataApp';
 
 const ExpenseTracker = () => {
     const localAppData = useContext(DataAppContext);
     return(
         <>
-        <Row className='bg-info'>
-            <Col sm={6}>
+        <div>
+            <div>
                 <h2>Expense Tracker</h2>
-            </Col>
-            <Col sm={6}>
-                <h2>Balance - {localAppData.appstate.balanceAmount}</h2>
-            </Col>
-        </Row>
-        <Row>
-            <Col sm={6} className='px-4'>
+            </div>
+            <div>
+                {/* <h2>Balance - {localAppData.appstate.amount}</h2> */}
+            </div>
+        </div>
+
+        <div>
+            <div>
                 <Income />
-            </Col>
-            <Col sm={6} className='px-4'>
+            </div>
+            <div>
                 <Expense />
-            </Col>
-        </Row>
+            </div>
+        </div>
         </>
     )
 }

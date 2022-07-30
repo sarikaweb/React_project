@@ -5,23 +5,29 @@ const DataAppContext = React.createContext();
 
 
 const DataApp = (props) => {
-    const [appstate, setAppState] = useState();
+    const initialValues = {balanceAmount: 0}
+    const [appstate, setAppState] = useState(initialValues);
+
+  
 
     const addBalance = (temp) => {
-        console.log('temp', temp, typeof(temp))
         setAppState({...appstate, balanceAmount: appstate.balanceAmount + parseInt(temp)});
     }
     const subBalance = (temp) => {
-        console.log('temp', temp, typeof(temp))
         setAppState({...appstate, balanceAmount: appstate.balanceAmount - parseInt(temp)});
     }
+  
 
     return(
-        <DataAppContext.Provider value={{appstate,  addBalance, subBalance}}>
-            <div className='container app-wrapper'>
+      
+
+        <DataAppContext.Provider value={{addBalance, subBalance}}>
+            <div>
                 {props.children}
+             
             </div>
         </DataAppContext.Provider>
+        
     )
 }
 
